@@ -5,19 +5,19 @@ export default {
     extend: {
       colors: {
         "text": "#212529",
-        "muted": "#CED4DA",
-        "accent": "#FF9505",
-        "primary": "#0A2463",
-        "secondary": "#3E4A61",
+        "muted": "#E0E0E0",
+        "accent": "#FF9800",
+        "primary": "#0D47A1",
+        "secondary": "#1976D2",
         "background": "#F8F9FA"
 },
       fontFamily: {
         "heading": [
-                "Poppins",
+                "Inter",
                 "sans-serif"
         ],
         "body": [
-                "Lato",
+                "Inter",
                 "sans-serif"
         ]
 },

@@ -12,7 +12,7 @@ export const SERVICES = ["drain cleaning","general plumbing","water heater insta
 
 export const TARGET_CITIES = [{"name":"Bellingham","state":"WA"}];
 
-export const SEO_KEYWORDS = ["plumber Bellingham WA","Bellingham plumber","drain cleaning Bellingham","water heater installation Bellingham WA","emergency plumber Bellingham","plumbing Bellingham WA","Bellingham plumbing"];
+export const SEO_KEYWORDS = ["plumber Bellingham WA","Bellingham plumbing","drain cleaning Bellingham WA","water heater installation Bellingham","emergency plumber Bellingham","plumbing services Bellingham"];
 
 export const TRUST_BADGES = [
   'Licensed & Insured',
