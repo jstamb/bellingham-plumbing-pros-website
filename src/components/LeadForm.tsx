@@ -13,8 +13,6 @@ export default function LeadForm({ title = 'Get Your Free Quote', city = '' }: L
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('loading')
-
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000))
     setStatus('success')
   }
