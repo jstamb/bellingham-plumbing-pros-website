@@ -15,7 +15,8 @@ export default function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link to="/" className="text-gray-700 hover:text-primary font-medium">Home</Link>
-          <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">Contact</Link>
+          <Link to="/blog" className="text-gray-700 hover:text-primary font-medium">
+            <Link to="/contact" className="text-gray-700 hover:text-primary font-medium">Contact</Link>
           <a
             href={`tel:${BUSINESS.phone}`}
             className="flex items-center gap-2 px-6 py-2.5 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
