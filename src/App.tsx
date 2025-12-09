@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import LocationPage from './pages/LocationPage'
 import ServicePage from './pages/ServicePage'
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 export default function App() {
   return (
@@ -12,7 +14,9 @@ export default function App() {
       <Header />
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/locations/:slug" element={<LocationPage />} />
           <Route path="/services/:slug" element={<ServicePage />} />
