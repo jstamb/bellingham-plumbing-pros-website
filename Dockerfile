@@ -1,31 +1,15 @@
-# Build stage
-FROM node:20-alpine AS builder
-
-WORKDIR /app
-
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies (use npm install since package-lock.json may not exist)
-RUN npm install
-
-# Copy source code
-COPY . .
-
-# Build the Vite project
-RUN npm run build
-
-# Production stage
+# Production-ready static site container
 FROM nginx:alpine
 
-# Copy built files from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy all static files to nginx html directory
+COPY . /usr/share/nginx/html
 
-# Copy nginx config
+# Copy nginx config for Cloud Run (port 8080)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Cloud Run uses port 8080
+# Cloud Run requires port 8080
 ENV PORT=8080
 EXPOSE 8080
 
+# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
